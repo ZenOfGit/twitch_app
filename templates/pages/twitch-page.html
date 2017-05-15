@@ -1,0 +1,17 @@
+<div ng-controller="TwitchController">
+    <br>
+    <form id="twitchSearchForm" name="searchStream" ng-submit="search(searchterm)">
+        <div class="input-group">
+            <md-input-container>
+                <label>Stream Search</label>
+                <input id="twitchSearchIn" type="search" placeholder="Enter search term here" ng-model="searchterm">
+            </md-input-container>
+            <md-button id="search_button" class="md-fab" aria-label="Search" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+                <md-tooltip md-direction="right">
+                    Click to search</md-tooltip>
+            </md-button>
+        </div>
+    </form>
+    <div ng-include="'/templates/pages/twitch-data.html'"></div>
+</div>

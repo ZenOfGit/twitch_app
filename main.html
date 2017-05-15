@@ -1,0 +1,43 @@
+<html ng-app="twitchApp">
+
+<head>
+    <title>Twitch Search</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body ng-cloak>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <page-header></page-header>
+                <twitch-page></twitch-page>
+                <page-footer></page-footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery 3.1.1 -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- angular 1.6.2 -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <!-- angular-aria 1.6.2 -->
+    <script src="/bower_components/angular-aria/angular-aria.js"></script>
+    <!-- angular-route 1.6.2 -->
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <!-- angular-route 1.6.2 -->
+    <script src="/bower_components/angular-material/angular-material.js"></script>
+    <!-- angular-route 1.6.2 -->
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <!-- angular-pagination -->
+    <script src="/bower_components/angularUtils-pagination/dirPagination.js"></script>
+    <!-- bootstrap 3.3.7 -->
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/app/app.js"></script>
+    <script src="/controllers/twitch-controller.js"></script>
+    <script src="/directives/directives.js"></script>
+</body>
+
+</html>

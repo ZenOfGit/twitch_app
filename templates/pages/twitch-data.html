@@ -1,0 +1,25 @@
+<br>
+<div class="col-md-8">
+    <div ng-if="streamlist._total">
+        <h2>Total streams: {{streamlist._total}}</h2>
+    </div>
+    <table class="table">
+        <tr>
+            <tbody>
+                <tr dir-paginate="streamer in streamlist.streams | itemsPerPage:7">
+                    <td>
+                        <img ng-src="{{streamer.preview.large}}" title="{{streamer.display_name}}" style="width:240px;height:135px;">
+                    </td>
+                    <td>
+                        <strong>
+                           <a ng-href="https://www.twitch.tv/{{streamer.channel.display_name}}">{{streamer.channel.display_name}}</a> </strong> (Current Viewers - {{streamer.viewers}})
+                        <br> {{streamer.channel.game}}
+                        <br> {{streamer.channel.status}}
+                    </td>
+                </tr>
+            </tbody>
+        </tr>
+    </table>
+    <dir-pagination-controls max-size="25" direction-links="true" boundary-links="true">
+    </dir-pagination-controls>
+</div>
