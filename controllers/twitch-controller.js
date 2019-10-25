@@ -2,7 +2,10 @@ angular.module('twitchApp')
 
 .controller('TwitchController', ['$scope', '$http', function ($scope, $http) {
 
-    var idnumber = 'cjt0vhb74q2qol0cjbecfthzx78gbb';
+    // OLD API search
+/*    var idnumber = 'cjt0vhb74q2qol0cjbecfthzx78gbb';*/
+    var header = {'Client-ID': 'cjt0vhb74q2qol0cjbecfthzx78gbb'}
+    var url = 'https://api.twitch.tv/helix/streams';
 
     $scope.streamlist = [];
 
@@ -16,7 +19,19 @@ angular.module('twitchApp')
     };
 
     $scope.search = function (searchterm) {
+        $http(
+            {method: 'GET',
+             url: url,
+            headers: header
+            })
+            .then(onComplete, onError);
+    };
+}]);
+
+
+
+// OLD API search
+/*    $scope.search = function (searchterm) {
         $http.get('https://api.twitch.tv/kraken/search/streams/?q=' + searchterm + '&limit=100&client_id=' + idnumber)
             .then(onComplete, onError);
-    }
-}]);
+    }*/

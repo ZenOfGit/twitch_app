@@ -2,21 +2,20 @@
 <div class="col-md-8">
     <dir-pagination-controls max-size="25" direction-links="true" boundary-links="true">
     </dir-pagination-controls>
-    <div ng-if="streamlist._total">
-        <h2>Total streams: {{streamlist._total}}, showing top 100</h2>
+    <div ng-if="streamlist.data">
+        <h2>Total streams: {{streamlist.data.length}}</h2>
     </div>
     <table class="table">
         <tr>
             <tbody>
-                <tr dir-paginate="streamer in streamlist.streams | itemsPerPage:7">
+                <tr dir-paginate="streamer in streamlist.data | itemsPerPage:7">
                     <td>
-                        <img ng-src="{{streamer.preview.large}}" title="{{streamer.display_name}}" style="width:240px;height:135px;">
+                        {{streamer.title}}
                     </td>
                     <td>
                         <strong>
-                           <a ng-href="https://www.twitch.tv/{{streamer.channel.display_name}}">{{streamer.channel.display_name}}</a> </strong> (Current Viewers - {{streamer.viewers}})
-                        <br> {{streamer.channel.game}}
-                        <br> {{streamer.channel.status}}
+                           <a ng-href="https://www.twitch.tv/{{streamer.user_name}}">{{streamer.user_name}}</a> </strong> (Current Viewers - {{streamer.viewer_count}})
+                        <br> {{streamer.type}}
                     </td>
                 </tr>
             </tbody>
