@@ -2,7 +2,7 @@ angular.module('twitchApp')
 
 .controller('TwitchController', ['$scope', '$http', function ($scope, $http) {
 
-    var header = {'Client-ID': 'xx'}
+    var header = {'Client-ID': 'cjt0vhb74q2qol0cjbecfthzx78gbb'}
     var url = 'https://api.twitch.tv/helix/streams';
 
     $scope.streamlist = [];
