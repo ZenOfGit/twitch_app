@@ -54,6 +54,10 @@ h3 {
     text-align: center;
 }
 
+.notes {
+    letter-spacing: 6px;
+}
+
 #search_button {
     background-color: #5c3da0;
 }
